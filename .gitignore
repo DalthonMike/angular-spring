@@ -1,0 +1,4 @@
+backend/.idea/*
+.idea/*
+backend/.project
+backend/.settings/*
