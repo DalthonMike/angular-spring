@@ -1,2 +1,2 @@
 # angular-spring
-Projeto criado com o a meta de desenvolver conhecimento aprofundado nas tecnologias Angular e Spring-boot
+Projeto criado com o a meta de desenvolver um sistema, utilizando as tecnologias Java(spring-boot) e Angular+.
