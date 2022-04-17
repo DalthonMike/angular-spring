@@ -1,0 +1,20 @@
+<div class="container-fluid container">
+  <form class="needs-validation" name="treinamentoForm" #pessoaForm="ngForm" (ngSubmit)="onSubmit(pessoaForm)"
+        novalidate>
+    <p-card class="card">
+      <p>Cadastro de pessoa</p>
+      <div style="margin-bottom: 10px">
+        <input class="inputs" placeholder="Nome" type="text" name="nome" required [(ngModel)]="resource.nome"
+               [ngClass]="{'is-invalid': validaPreenchimento(resource.nome)}"
+        >
+      </div>
+      <div *ngIf="validaPreenchimento(resource.nome)"
+           class="invalid-feedback-curso">
+        O nome é de preenchimento obrigatório
+      </div>
+      <div>
+        <button class="botao" pButton type="submit" label="Cadastre-se"></button>
+      </div>
+    </p-card>
+  </form>
+</div>
