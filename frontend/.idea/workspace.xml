@@ -4,38 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b37c752-ff3a-4c4d-8098-2b7f56f17431" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../backend/Application/src/main/java/com/projeto/Application/CorsFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto-estudo/src/app/pages/pessoa/model/pessoa.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto-estudo/src/app/pages/pessoa/pessoa-cadastro/pessoa-cadastro.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto-estudo/src/app/pages/pessoa/pessoa-cadastro/pessoa-cadastro.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto-estudo/src/app/pages/pessoa/pessoa-cadastro/pessoa-cadastro.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto-estudo/src/app/pages/pessoa/pessoa-cadastro/pessoa-cadastro.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto-estudo/src/app/pages/pessoa/pessoa.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto-estudo/src/app/util/Utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/Application/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/Application/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/docker-compose.yml" afterDir="false" />
+    <list default="true" id="8b37c752-ff3a-4c4d-8098-2b7f56f17431" name="Changes" comment="[FRONTEND] - Funcionalidade para cadastrar pessoa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/0.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/1.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/10.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/11.pack" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/11.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/12.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/13.pack" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/13.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/2.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/3.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/4.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/6.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/7.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/8.pack" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/8.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/9.pack" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/9.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/index.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/.angular/cache/13.3.2/angular-webpack/134e68f62480bf22ff4502572a3a1f288bf21b03/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-estudo/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-estudo/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +38,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="ts.external.directory.path" value="C:\Projetos\Estudo\angular-spring\frontend\projeto-estudo\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -109,8 +80,16 @@
       <workItem from="1650119208877" duration="229000" />
       <workItem from="1650119453469" duration="5947000" />
       <workItem from="1650155896207" duration="7864000" />
-      <workItem from="1650163875208" duration="897000" />
+      <workItem from="1650163875208" duration="1830000" />
     </task>
+    <task id="LOCAL-00001" summary="[FRONTEND] - Funcionalidade para cadastrar pessoa">
+      <created>1650164964160</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650164964160</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,5 +106,13 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[FRONTEND] - Funcionalidade para cadastrar pessoa" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FRONTEND] - Funcionalidade para cadastrar pessoa" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
