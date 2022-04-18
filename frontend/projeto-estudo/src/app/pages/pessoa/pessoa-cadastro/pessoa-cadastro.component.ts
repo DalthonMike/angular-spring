@@ -34,7 +34,7 @@ export class PessoaCadastroComponent implements OnInit {
 
     if (!pessoaForm.invalid) {
         this.salvar();
-        this.menssagem.sucesso('Teste')
+        this.menssagem.sucesso('Pessoa cadastrada com sucesso')
         this.router.navigate([''])
     } else {
       console.log(pessoaForm.value)
