@@ -6,4 +6,8 @@ import lombok.Data;
 public class PessoaRequest {
 
     private String nome;
+
+    private String email;
+
+    private String cpf;
 }
