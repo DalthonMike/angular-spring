@@ -7,6 +7,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {ButtonModule} from "primeng/button";
 import {PessoaCadastroModule} from "./pages/pessoa/pessoa-cadastro/pessoa-cadastro.module";
 import {HttpClientModule} from "@angular/common/http";
+import {NgxMaskModule} from "ngx-mask";
 
 @NgModule({
   declarations: [
@@ -18,9 +19,13 @@ import {HttpClientModule} from "@angular/common/http";
     AppRoutingModule,
     ButtonModule,
     HttpClientModule,
-    PessoaCadastroModule
+    PessoaCadastroModule,
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

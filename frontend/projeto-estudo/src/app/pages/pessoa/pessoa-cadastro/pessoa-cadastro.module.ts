@@ -6,6 +6,7 @@ import {SharedModule} from "primeng/api";
 import {ButtonModule} from "primeng/button";
 import {FormsModule} from "@angular/forms";
 import {ConfirmDialogModule} from "primeng/confirmdialog";
+import {NgxMaskModule} from "ngx-mask";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {ConfirmDialogModule} from "primeng/confirmdialog";
     SharedModule,
     ButtonModule,
     FormsModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    NgxMaskModule.forChild()
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

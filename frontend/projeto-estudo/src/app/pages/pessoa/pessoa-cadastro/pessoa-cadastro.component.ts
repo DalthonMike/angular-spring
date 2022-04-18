@@ -3,9 +3,12 @@ import {NgForm} from "@angular/forms";
 import {PessoaModel} from "../model/pessoa.model";
 import {PessoaService} from "../pessoa.service";
 import {Utils} from "../../../util/Utils";
+import {Menssagens} from "../../../menssagem/menssagens";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-pessoa-cadastro',
+
   templateUrl: './pessoa-cadastro.component.html',
   styleUrls: ['./pessoa-cadastro.component.css']
 })
@@ -14,7 +17,9 @@ export class PessoaCadastroComponent implements OnInit {
   private submitted = false;
 
   constructor(
+    public router: Router,
     private pessoaService: PessoaService,
+    private menssagem: Menssagens
   ) {
 
   }
@@ -29,8 +34,10 @@ export class PessoaCadastroComponent implements OnInit {
 
     if (!pessoaForm.invalid) {
         this.salvar();
+        this.menssagem.sucesso('Teste')
+        this.router.navigate([''])
     } else {
-      console.log('Erro')
+      console.log(pessoaForm.value)
     }
   }
 
