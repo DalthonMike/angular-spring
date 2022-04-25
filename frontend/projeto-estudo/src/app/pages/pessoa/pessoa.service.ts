@@ -25,4 +25,8 @@ export class PessoaService {
   listar() {
     return this.http.get<any>(`${this.pathBase}/pessoa`)
   }
+
+  exclusao(id: number) {
+    return this.http.delete<any>(`${this.pathBase}/pessoa/${id}`)
+  }
 }
