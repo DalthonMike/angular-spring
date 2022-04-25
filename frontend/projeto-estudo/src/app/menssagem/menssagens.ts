@@ -15,6 +15,13 @@ export class Menssagens {
     })
   }
 
+  erroComum(titulo: string, descricao: string) {
+    Swal.fire({
+      icon: 'warning',
+      title: titulo,
+      text: descricao,
+    })
+  }
 
 
 }
