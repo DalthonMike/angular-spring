@@ -33,9 +33,7 @@ export class PessoaCadastroComponent implements OnInit {
     this.submitted = true;
 
     if (!pessoaForm.invalid) {
-        this.salvar();
-        this.menssagem.sucesso('Pessoa cadastrada com sucesso')
-        this.router.navigate([''])
+      this.salvar();
     } else {
       console.log(pessoaForm.value)
     }
@@ -43,21 +41,24 @@ export class PessoaCadastroComponent implements OnInit {
 
   salvar() {
     this.pessoaService.cadastro(this.resource).subscribe(() => {
-
-        // this.menssagem.sucessoSemBtnComTimer('Pessoa cadastrada com sucesso!');
+        this.menssagem.sucesso('Pessoa cadastrada com sucesso')
+        this.voltar()
       },
-      (error: { error: { message: any; }; }) => {
-        error.error.message
+      error => {
+        this.menssagem.erroComum('Erro', error.error.message)
       }
     );
   }
 
-  public validaPreenchimento(value: any): boolean{
+  public validaPreenchimento(value: any): boolean {
     return this.submitted && this.isVazio(value);
   }
 
-  public isVazio(value: any): boolean{
+  public isVazio(value: any): boolean {
     return Utils.isNullOrUndefinedOrEmpty(value);
   }
 
+  voltar() {
+    this.router.navigate([''])
+  }
 }
