@@ -23,5 +23,16 @@ export class Menssagens {
     })
   }
 
+  erroComOpcaoSimNao(titulo: string, descricao: string): Promise<any> {
+    return Swal.fire({
+      title: titulo,
+      text: descricao,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Sim',
+      cancelButtonText: 'Não',
+      reverseButtons: true
+    });
+  }
 
 }
