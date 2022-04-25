@@ -1,0 +1,28 @@
+<div class="card">
+  <p-card header="Lista de Pessoas">
+    <p-table [value]="pessoas" [scrollable]="true" scrollHeight="400px">
+      <ng-template pTemplate="header">
+        <tr>
+          <th style="min-width:200px">Nome</th>
+          <th style="min-width:200px">E-mail</th>
+          <th style="min-width:200px">CPF</th>
+          <th style="min-width:200px">Ações</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-pessoas>
+         <tr>
+          <td style="min-width:200px">{{pessoas.nome}}</td>
+          <td style="min-width:200px">{{pessoas.email}}</td>
+          <td style="min-width:200px">{{pessoas.cpf | cpf}}</td>
+          <td>
+            <p-button icon="pi pi-pencil" title="Editar Pessoa" styleClass="p-button-primary" [style]="{'margin-right' : '5px'}"></p-button>
+            <p-button icon="pi pi-trash" title="Excluir Pessoa" styleClass="p-button-danger"></p-button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+    <div style="margin-top: 50px; float: right">
+      <p-button label="Nova Pessoa" icon="pi pi-plus" routerLink="/pessoa-cadastro"></p-button>
+    </div>
+  </p-card>
+</div>
