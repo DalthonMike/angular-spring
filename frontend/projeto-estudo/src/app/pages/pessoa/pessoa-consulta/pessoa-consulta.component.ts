@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {PessoaService} from "../pessoa.service";
 import {PessoaResponseModel} from "../model/pessoa-response.model";
+import {Menssagens} from "../../../menssagem/menssagens";
 
 @Component({
   selector: 'app-pessoa-consulta',
@@ -14,7 +15,8 @@ export class PessoaConsultaComponent implements OnInit {
 
 
   constructor(
-    private pessoaService: PessoaService
+    private pessoaService: PessoaService,
+    private mensagens: Menssagens
   ) {
 
   }
@@ -29,5 +31,23 @@ export class PessoaConsultaComponent implements OnInit {
     })
   }
 
+  excluir(id: number) {
+    this.mensagens.erroComOpcaoSimNao('Exclusão', 'Deseja realmente excluir essa pessoa?')
+      .then(response => {
+        if (response.value) {
+          this.confirmaRemocao(id);
+        }
+      })
+  }
+
+  confirmaRemocao(id: number) {
+    this.pessoaService.exclusao(id)
+      .subscribe(response => {
+        this.mensagens.sucesso('Pessoa excluida com sucesso')
+        this.ngOnInit();
+      }, error => {
+        this.mensagens.erroComum('Erro', error.error.details)
+      });
+  }
 
 }
