@@ -7,28 +7,29 @@
         <input class="inputs" placeholder="Nome" type="text" name="nome" required [(ngModel)]="resource.nome"
                [ngClass]="{'is-invalid': validaPreenchimento(resource.nome)}"
         >
-      </div>
-      <div *ngIf="validaPreenchimento(resource.nome)"
-           class="invalid-feedback-curso">
-        O nome é de preenchimento obrigatório
+        <div *ngIf="validaPreenchimento(resource.nome)"
+             class="invalid-feedback-curso">
+          O nome é de preenchimento obrigatório
+        </div>
       </div>
       <div style="margin-bottom: 10px">
         <input class="inputs" placeholder="E-mail" type="text" name="email" required [(ngModel)]="resource.email"
                [ngClass]="{'is-invalid': validaPreenchimento(resource.email)}"
         >
-      </div>
-      <div *ngIf="validaPreenchimento(resource.email)"
-           class="invalid-feedback-curso">
-        O email é de preenchimento obrigatório
+        <div *ngIf="validaPreenchimento(resource.email)"
+             class="invalid-feedback-curso">
+          O email é de preenchimento obrigatório
+        </div>
       </div>
       <div style="margin-bottom: 10px">
-        <input class="inputs" placeholder="CPF" type="text" name="cpf" required mask="000.000.000-00" [(ngModel)]="resource.cpf"
+        <input class="inputs" placeholder="CPF" type="text" name="cpf" required mask="000.000.000-00"
+               [(ngModel)]="resource.cpf"
                [ngClass]="{'is-invalid': validaPreenchimento(resource.cpf)}"
         >
-      </div>
-      <div *ngIf="validaPreenchimento(resource.cpf)"
-           class="invalid-feedback-curso">
-        O CPF é de preenchimento obrigatório
+        <div *ngIf="validaPreenchimento(resource.cpf)"
+             class="invalid-feedback-curso">
+          O CPF é de preenchimento obrigatório
+        </div>
       </div>
 
       <div>
