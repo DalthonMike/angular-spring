@@ -8,6 +8,7 @@ import {ButtonModule} from "primeng/button";
 import {PessoaCadastroModule} from "./pages/pessoa/pessoa-cadastro/pessoa-cadastro.module";
 import {HttpClientModule} from "@angular/common/http";
 import {NgxMaskModule} from "ngx-mask";
+import {PessoaConsultaModule} from "./pages/pessoa/pessoa-consulta/pessoa-consulta.module";
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {NgxMaskModule} from "ngx-mask";
     ButtonModule,
     HttpClientModule,
     PessoaCadastroModule,
+    PessoaConsultaModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: true
     })
