@@ -31,7 +31,6 @@ export class Menssagens {
       showCancelButton: true,
       confirmButtonText: 'Sim',
       cancelButtonText: 'Não',
-      reverseButtons: true
     });
   }
 
