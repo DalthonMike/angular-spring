@@ -1,7 +1,10 @@
 export class PessoaModel {
-  constructor() {
-  }
 
   public nome: string | undefined;
+  public email: string | undefined;
+  public cpf: string | undefined;
+
+  constructor() {
+  }
 
 }
