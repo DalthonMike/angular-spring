@@ -14,8 +14,11 @@ public class PessoaService {
 
     @Autowired
     private PessoaRepository pessoaRepository;
+    @Autowired
+    private EmailService emailService;
 
     public void cadastrar(Pessoa pessoa) {
+        emailService.validaEmail(pessoa.getEmail());
         if (pessoaRepository.findByNome(pessoa.getNome()).isPresent()) {
             throw new NegocioException("Já existe uma pessoa com o nome (" + pessoa.getNome() + ") cadastrado");
         } else {
@@ -32,4 +35,5 @@ public class PessoaService {
         pessoaRepository.deleteById(byId.getId());
 
     }
+
 }
