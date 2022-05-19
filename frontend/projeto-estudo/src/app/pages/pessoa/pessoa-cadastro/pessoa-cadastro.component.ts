@@ -40,14 +40,16 @@ export class PessoaCadastroComponent implements OnInit {
   }
 
   salvar() {
-    this.pessoaService.cadastro(this.resource).subscribe(() => {
+    this.pessoaService.cadastro(this.resource).subscribe({
+      next: () => {
         this.menssagem.sucesso('Pessoa cadastrada com sucesso')
         this.voltar()
-      },
-      error => {
+      }
+      ,
+      error: error => {
         this.menssagem.erroComum('Erro', error.error.message)
       }
-    );
+    });
   }
 
   public validaPreenchimento(value: any): boolean {
