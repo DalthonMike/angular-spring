@@ -6,6 +6,8 @@ import {ButtonModule} from "primeng/button";
 import {CardModule} from "primeng/card";
 import {SplitButtonModule} from "primeng/splitbutton";
 import {CpfPipe} from "../../pipe/CpfPipe";
+import {CheckboxModule} from "primeng/checkbox";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -13,13 +15,15 @@ import {CpfPipe} from "../../pipe/CpfPipe";
     PessoaConsultaComponent,
     CpfPipe
   ],
-  imports: [
-    CommonModule,
-    TableModule,
-    ButtonModule,
-    CardModule,
-    SplitButtonModule,
-  ]
+    imports: [
+        CommonModule,
+        TableModule,
+        ButtonModule,
+        CardModule,
+        SplitButtonModule,
+        CheckboxModule,
+        FormsModule
+    ]
 })
 export class PessoaConsultaModule {
 }

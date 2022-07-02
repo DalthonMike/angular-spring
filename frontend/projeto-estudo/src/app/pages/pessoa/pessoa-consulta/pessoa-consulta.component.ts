@@ -12,7 +12,7 @@ export class PessoaConsultaComponent implements OnInit {
 
   products: string[] = [];
   pessoas: PessoaResponseModel[] = []
-
+  checkbox: boolean = false;
 
   constructor(
     private pessoaService: PessoaService,
@@ -22,10 +22,24 @@ export class PessoaConsultaComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.listar()
+    this.listaPadrao();
   }
 
-  listar() {
+  checkBoxChange(check: boolean) {
+    if (check) {
+      this.listarTodas()
+    } else {
+      this.listaPadrao();
+    }
+  }
+
+  listarTodas() {
+    this.pessoaService.listarTodas().subscribe(response => {
+      this.pessoas = response;
+    })
+  }
+
+  listaPadrao() {
     this.pessoaService.listar().subscribe(response => {
       this.pessoas = response;
     })

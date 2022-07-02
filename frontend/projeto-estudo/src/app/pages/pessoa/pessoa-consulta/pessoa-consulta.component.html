@@ -1,11 +1,17 @@
 <div class="card">
   <p-card header="Lista de Pessoas">
+    <div class="row">
+      <p-checkbox type="checkbox" id="todas" [(ngModel)]="checkbox" [binary]="true" (click)="checkBoxChange(checkbox)">
+      </p-checkbox>
+      <label for="todas" style="margin-left: 5px">Todas</label>
+    </div>
     <p-table [value]="pessoas" [scrollable]="true" scrollHeight="400px">
       <ng-template pTemplate="header">
         <tr>
           <th style="min-width:200px">Nome</th>
           <th style="min-width:200px">E-mail</th>
           <th style="min-width:200px">CPF</th>
+          <th style="min-width:200px">Status</th>
           <th style="min-width:200px">Ações</th>
         </tr>
       </ng-template>
@@ -14,10 +20,12 @@
           <td style="min-width:200px">{{pessoas.nome}}</td>
           <td style="min-width:200px">{{pessoas.email}}</td>
           <td style="min-width:200px">{{pessoas.cpf | cpf}}</td>
+          <td style="min-width:200px">{{pessoas.status}}</td>
           <td>
             <p-button icon="pi pi-pencil" title="Editar Pessoa" styleClass="p-button-primary"
                       [style]="{'margin-right' : '5px'}"></p-button>
-            <p-button icon="pi pi-trash" title="Excluir Pessoa" (click)="excluir(pessoas.id)"
+            <p-button *ngIf="pessoas.status != 'Excluído'" icon="pi pi-trash" title="Excluir Pessoa"
+                      (click)="excluir(pessoas.id)"
                       styleClass="p-button-danger"></p-button>
           </td>
         </tr>
