@@ -37,13 +37,23 @@ public class PessoaController implements IPessoaController {
 
     @Override
     public ResponseEntity<List<PessoaResponse>> listar() {
-        return ResponseEntity.ok(pessoaResponseConverter.toResponse(pessoaService.listar()));
+        return ResponseEntity.ok(pessoaResponseConverter.toResponse(pessoaService.listaPadrao()));
 
     }
 
     @Override
     public void deletar(Long id) {
-        pessoaService.deletar(id);
+        pessoaService.excluirLogicamente(id);
+    }
+
+    @Override
+    public ResponseEntity<PessoaResponse> findById(Long id) {
+        return ResponseEntity.ok(pessoaResponseConverter.toResponse(pessoaService.buscarPorId(id)));
+    }
+
+    @Override
+    public ResponseEntity<List<PessoaResponse>> listarTodos() {
+        return ResponseEntity.ok(pessoaResponseConverter.toResponse(pessoaService.listarTodos()));
     }
 
 }

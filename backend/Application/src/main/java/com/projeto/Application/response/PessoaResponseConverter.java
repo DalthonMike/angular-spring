@@ -10,6 +10,7 @@ public class PessoaResponseConverter extends AbstractResponseMapper<Pessoa, Pess
     public PessoaResponse toResponse(Pessoa response) {
         return PessoaResponse.builder()
                 .id(response.getId())
+                .status(response.getStatus().getDescricao())
                 .nome(response.getNome())
                 .email(response.getEmail())
                 .cpf(response.getCpf())

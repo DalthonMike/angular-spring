@@ -1,5 +1,6 @@
 package com.projeto.Application.model;
 
+import com.projeto.Application.enun.StatusPessoaEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,6 +19,9 @@ public class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @Enumerated(EnumType.STRING)
+    private StatusPessoaEnum status;
 
     private String nome;
 

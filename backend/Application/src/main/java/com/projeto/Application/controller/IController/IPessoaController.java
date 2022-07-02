@@ -17,4 +17,11 @@ public interface IPessoaController {
 
     @DeleteMapping("/{id}")
     void deletar(@PathVariable Long id);
+
+    @GetMapping("/{id}")
+    ResponseEntity<PessoaResponse> findById(Long id);
+
+    @GetMapping("/todas")
+    ResponseEntity<List<PessoaResponse>> listarTodos();
+
 }
