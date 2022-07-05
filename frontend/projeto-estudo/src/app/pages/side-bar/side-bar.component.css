@@ -1,0 +1,48 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  margin: 0;
+  z-index: 999;
+  background-color: #2196f3;
+  padding: 0;
+}
+
+.logo {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #F0F2F5;
+  text-transform: uppercase;
+  color: #F0F2F5;
+  margin: 0;
+  z-index: 1;
+}
+
+.layout-menu {
+  padding: 0;
+  color: #F0F2F5;
+  text-decoration: none;
+  width: 210px;
+  height: 52px;
+}
+
+.menu-itens {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  text-decoration: none;
+  color: #F0F2F5;
+  box-sizing: border-box;
+  width: 250px;
+}
+
+.menu-itens:hover {
+  box-shadow: inset 250px 0 0 0 #1588E8FF;
+}

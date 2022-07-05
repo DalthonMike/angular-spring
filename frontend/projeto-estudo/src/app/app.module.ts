@@ -9,6 +9,7 @@ import {PessoaCadastroModule} from "./pages/pessoa/pessoa-cadastro/pessoa-cadast
 import {HttpClientModule} from "@angular/common/http";
 import {NgxMaskModule} from "ngx-mask";
 import {PessoaConsultaModule} from "./pages/pessoa/pessoa-consulta/pessoa-consulta.module";
+import {SideBarModule} from "./pages/side-bar/side-bar.module";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {PessoaConsultaModule} from "./pages/pessoa/pessoa-consulta/pessoa-consul
     PessoaConsultaModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: true
-    })
+    }),
+    SideBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
