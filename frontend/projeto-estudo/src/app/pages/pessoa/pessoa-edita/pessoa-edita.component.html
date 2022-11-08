@@ -1,0 +1,34 @@
+<div class="container-fluid container">
+  <form class="needs-validation" name="treinamentoForm" #pessoaForm="ngForm" (ngSubmit)="onSubmit(pessoaForm)"
+        novalidate>
+    <p-card class="card">
+      <p>Cadastro de pessoa</p>
+      <div style="margin-bottom: 10px">
+        <input class="inputs" placeholder="Nome" type="text" name="nome" required [(ngModel)]="resource.nome"
+               [ngClass]="{'is-invalid': validaPreenchimento(resource.nome)}"
+        >
+        <div *ngIf="validaPreenchimento(resource.nome)"
+             class="invalid-feedback-curso">
+          O nome é de preenchimento obrigatório
+        </div>
+      </div>
+      <div style="margin-bottom: 10px">
+        <input class="inputs" placeholder="E-mail" type="text" name="email" required [(ngModel)]="resource.email"
+               [ngClass]="{'is-invalid': validaPreenchimento(resource.email)}"
+        >
+        <div *ngIf="validaPreenchimento(resource.email)"
+             class="invalid-feedback-curso">
+          O email é de preenchimento obrigatório
+        </div>
+      </div>
+      <div>
+        <p-button label="Editar" iconPos="left" type="submit"></p-button>
+      </div>
+      <div>
+        <button style="margin-top: 5px" iconPos="left" pButton type="button" (click)="voltar()"
+                class="p-button-secondary"><i class="pi pi-arrow-left" style="margin-right: 5px"></i>Voltar
+        </button>
+      </div>
+    </p-card>
+  </form>
+</div>

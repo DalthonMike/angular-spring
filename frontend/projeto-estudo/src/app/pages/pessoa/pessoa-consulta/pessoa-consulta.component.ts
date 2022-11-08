@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {PessoaService} from "../pessoa.service";
 import {PessoaResponseModel} from "../model/pessoa-response.model";
 import {Menssagens} from "../../../menssagem/menssagens";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-pessoa-consulta',
@@ -16,8 +17,9 @@ export class PessoaConsultaComponent implements OnInit {
 
   constructor(
     private pessoaService: PessoaService,
-    private mensagens: Menssagens
-  ) {
+    private mensagens: Menssagens,
+    public router: Router
+) {
 
   }
 
@@ -43,6 +45,12 @@ export class PessoaConsultaComponent implements OnInit {
     this.pessoaService.listar().subscribe(response => {
       this.pessoas = response;
     })
+  }
+
+  editar(pessoa: any) {
+    this.router.navigate(['/pessoa-edita'], {
+      state: { dados: pessoa }
+    });
   }
 
   excluir(id: number) {

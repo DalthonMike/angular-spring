@@ -22,8 +22,8 @@
           <td style="min-width:200px">{{pessoas.cpf | cpf}}</td>
           <td style="min-width:200px">{{pessoas.status}}</td>
           <td>
-            <p-button icon="pi pi-pencil" title="Editar Pessoa" styleClass="p-button-primary"
-                      [style]="{'margin-right' : '5px'}"></p-button>
+            <p-button *ngIf="pessoas.status != 'Excluído'" icon="pi pi-pencil" title="Editar Pessoa" styleClass="p-button-primary"
+                      [style]="{'margin-right' : '5px'}" (click)="editar(pessoas)"></p-button>
             <p-button *ngIf="pessoas.status != 'Excluído'" icon="pi pi-trash" title="Excluir Pessoa"
                       (click)="excluir(pessoas.id)"
                       styleClass="p-button-danger"></p-button>

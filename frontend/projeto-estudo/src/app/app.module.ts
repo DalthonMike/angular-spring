@@ -10,10 +10,18 @@ import {HttpClientModule} from "@angular/common/http";
 import {NgxMaskModule} from "ngx-mask";
 import {PessoaConsultaModule} from "./pages/pessoa/pessoa-consulta/pessoa-consulta.module";
 import {SideBarModule} from "./pages/side-bar/side-bar.module";
+import { PessoaEditaComponent } from './pages/pessoa/pessoa-edita/pessoa-edita.component';
+import {CommonModule} from "@angular/common";
+import {TableModule} from "primeng/table";
+import {CardModule} from "primeng/card";
+import {SplitButtonModule} from "primeng/splitbutton";
+import {CheckboxModule} from "primeng/checkbox";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
+    PessoaEditaComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +34,13 @@ import {SideBarModule} from "./pages/side-bar/side-bar.module";
     NgxMaskModule.forRoot({
       dropSpecialCharacters: true
     }),
+    CommonModule,
+    TableModule,
+    ButtonModule,
+    CardModule,
+    SplitButtonModule,
+    CheckboxModule,
+    FormsModule,
     SideBarModule
   ],
   providers: [],

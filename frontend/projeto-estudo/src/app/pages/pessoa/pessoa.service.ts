@@ -23,6 +23,10 @@ export class PessoaService {
     return this.http.post<any>(`${this.pathBase}/pessoa`, formData, {observe: 'response'});
   }
 
+  editar(formData: PessoaModel) {
+    return this.http.put<any>(`${this.pathBase}/pessoa`, formData, {observe: 'response'});
+  }
+
   listar(): Observable<any> {
     return this.http.get<any>(`${this.pathBase}/pessoa`)
   }
