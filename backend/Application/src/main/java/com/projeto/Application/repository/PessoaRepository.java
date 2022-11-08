@@ -9,7 +9,7 @@ import java.util.Optional;
 
 public interface PessoaRepository extends JpaRepository<Pessoa, Long> {
 
-    Optional<Pessoa> findByNome(String nome);
+    Optional<Pessoa> findByCpf(String cpf);
 
-    List<Pessoa> findByStatus(StatusPessoaEnum status);
+    List<Pessoa> findAllByStatusIsNot(StatusPessoaEnum status);
 }

@@ -12,6 +12,9 @@ public interface IPessoaController {
     @PostMapping
     ResponseEntity cadastrar(@RequestBody PessoaRequest pessoaRequest);
 
+    @PutMapping
+    ResponseEntity editar(@RequestBody PessoaRequest pessoaRequest);
+
     @GetMapping
     ResponseEntity<List<PessoaResponse>> listar();
 

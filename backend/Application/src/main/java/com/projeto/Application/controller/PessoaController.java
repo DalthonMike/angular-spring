@@ -36,6 +36,13 @@ public class PessoaController implements IPessoaController {
     }
 
     @Override
+    public ResponseEntity editar(PessoaRequest pessoaRequest) {
+        Pessoa pessoa = pessoaRequestConverter.toEntity(pessoaRequest);
+        pessoaService.editar(pessoa);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+    @Override
     public ResponseEntity<List<PessoaResponse>> listar() {
         return ResponseEntity.ok(pessoaResponseConverter.toResponse(pessoaService.listaPadrao()));
 

@@ -20,16 +20,20 @@ public class PessoaService {
 
     public void cadastrar(Pessoa pessoa) {
         emailService.validaEmail(pessoa.getEmail());
-        if (pessoaRepository.findByNome(pessoa.getNome()).isPresent()) {
-            throw new NegocioException("Já existe uma pessoa com o nome (" + pessoa.getNome() + ") cadastrado");
-        } else {
-            pessoa.setStatus(StatusPessoaEnum.ATIVO);
-            pessoaRepository.save(pessoa);
-        }
+        verificaCpfExistente(pessoa.getCpf());
+        pessoa.setStatus(StatusPessoaEnum.ATIVO);
+        pessoaRepository.save(pessoa);
+
     }
 
-        public List<Pessoa> listaPadrao() {
-        return pessoaRepository.findByStatus(StatusPessoaEnum.ATIVO);
+    public void editar(Pessoa pessoa) {
+        emailService.validaEmail(pessoa.getEmail());
+        pessoa.setStatus(StatusPessoaEnum.EDITADO);
+        pessoaRepository.saveAndFlush(pessoa);
+    }
+
+    public List<Pessoa> listaPadrao() {
+        return pessoaRepository.findAllByStatusIsNot(StatusPessoaEnum.EXCLUIDO);
     }
 
     public List<Pessoa> listarTodos() {
@@ -46,6 +50,14 @@ public class PessoaService {
     public Pessoa buscarPorId(Long id) {
         Pessoa byId = pessoaRepository.findById(id).orElseThrow(() -> new EntidadeNaoEncontradaException("Entidade não encontrada"));
         return byId;
+    }
+
+    public boolean verificaCpfExistente(String cpf) {
+        if (pessoaRepository.findByCpf(cpf).isPresent()) {
+            throw new NegocioException("Já existe uma pessoa com o CPF (" + cpf + ") cadastrado");
+        } else {
+            return false;
+        }
     }
 
 }
