@@ -7,20 +7,22 @@ import {ButtonModule} from "primeng/button";
 import {FormsModule} from "@angular/forms";
 import {ConfirmDialogModule} from "primeng/confirmdialog";
 import {NgxMaskModule} from "ngx-mask";
+import {DropdownModule} from "primeng/dropdown";
 
 @NgModule({
   declarations: [
     PessoaCadastroComponent
   ],
-  imports: [
-    CommonModule,
-    CardModule,
-    SharedModule,
-    ButtonModule,
-    FormsModule,
-    ConfirmDialogModule,
-    NgxMaskModule.forChild()
-  ],
+    imports: [
+        CommonModule,
+        CardModule,
+        SharedModule,
+        ButtonModule,
+        FormsModule,
+        ConfirmDialogModule,
+        NgxMaskModule.forChild(),
+        DropdownModule
+    ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ]

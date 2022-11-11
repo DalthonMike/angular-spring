@@ -31,7 +31,16 @@
           O CPF é de preenchimento obrigatório
         </div>
       </div>
-
+      <div class="field col-12 md:col-4">
+        <p-dropdown inputId="dropdown" [autoDisplayFirst]="false" [options]="perfis" name="perfil" [(ngModel)]="resource.perfil" optionLabel="name" optionValue="descricao"
+                    placeholder="Selecione um perfil"
+        [ngClass]="{'ng-invalid ng-dirty': validaPreenchimento(resource.perfil)}"
+        ></p-dropdown>
+        <div *ngIf="validaPreenchimento(resource.perfil)"
+             class="invalid-feedback-curso">
+          O Perfil é de preenchimento obrigatório
+        </div>
+      </div>
       <div>
         <p-button label="Cadastre-se" iconPos="left" type="submit"></p-button>
       </div>

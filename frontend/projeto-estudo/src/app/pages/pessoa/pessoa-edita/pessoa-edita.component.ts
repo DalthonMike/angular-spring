@@ -5,6 +5,7 @@ import {Menssagens} from "../../../menssagem/menssagens";
 import {Router} from "@angular/router";
 import {Utils} from "../../../util/Utils";
 import {PessoaModel} from "../model/pessoa.model";
+import {Perfil} from "../../../interfaces/Perfil";
 
 @Component({
   selector: 'app-pessoa-edita',
@@ -13,8 +14,8 @@ import {PessoaModel} from "../model/pessoa.model";
 })
 export class PessoaEditaComponent implements OnInit {
 
-  resource: PessoaModel;
-  filtro: PessoaModel = new PessoaModel();
+  resource: any;
+  opcoesTipoPessoa: Perfil[];
   private submitted = false;
 
   constructor(
@@ -22,6 +23,12 @@ export class PessoaEditaComponent implements OnInit {
     private menssagem: Menssagens,
     public router: Router
   ) {
+
+    this.opcoesTipoPessoa = [
+      {name: 'Técnico', descricao: 'TECNICO'},
+      {name: 'Comum', descricao: 'COMUM'}
+    ]
+
     /**
      * Recuperar os paramentros passados da tela anterior.
      */

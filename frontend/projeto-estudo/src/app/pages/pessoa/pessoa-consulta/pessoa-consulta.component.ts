@@ -11,7 +11,6 @@ import {Router} from "@angular/router";
 })
 export class PessoaConsultaComponent implements OnInit {
 
-  products: string[] = [];
   pessoas: PessoaResponseModel[] = []
   checkbox: boolean = false;
 
@@ -48,8 +47,13 @@ export class PessoaConsultaComponent implements OnInit {
   }
 
   editar(pessoa: any) {
+    const dadosEdicao = {
+      id: pessoa.id,
+      nome: pessoa.nome,
+      email: pessoa.email
+    }
     this.router.navigate(['/pessoa-edita'], {
-      state: { dados: pessoa }
+      state: { dados:  dadosEdicao}
     });
   }
 

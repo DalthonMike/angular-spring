@@ -12,6 +12,7 @@
           <th style="min-width:200px">E-mail</th>
           <th style="min-width:200px">CPF</th>
           <th style="min-width:200px">Status</th>
+          <th style="min-width:200px">Perfil</th>
           <th style="min-width:200px">Ações</th>
         </tr>
       </ng-template>
@@ -21,6 +22,7 @@
           <td style="min-width:200px">{{pessoas.email}}</td>
           <td style="min-width:200px">{{pessoas.cpf | cpf}}</td>
           <td style="min-width:200px">{{pessoas.status}}</td>
+          <td style="min-width:200px">{{pessoas.perfil}}</td>
           <td>
             <p-button *ngIf="pessoas.status != 'Excluído'" icon="pi pi-pencil" title="Editar Pessoa" styleClass="p-button-primary"
                       [style]="{'margin-right' : '5px'}" (click)="editar(pessoas)"></p-button>

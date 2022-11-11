@@ -5,6 +5,7 @@ export class PessoaModel {
   public email: string | undefined;
   public cpf: string | undefined;
   public status: string | undefined;
+  public perfil: string | undefined;
 
   constructor() {
   }
