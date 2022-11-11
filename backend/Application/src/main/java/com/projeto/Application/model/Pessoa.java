@@ -1,6 +1,7 @@
 package com.projeto.Application.model;
 
 import com.projeto.Application.enun.StatusPessoaEnum;
+import com.projeto.Application.enun.PerfilEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,6 +23,9 @@ public class Pessoa {
 
     @Enumerated(EnumType.STRING)
     private StatusPessoaEnum status;
+
+    @Enumerated(EnumType.STRING)
+    private PerfilEnum perfil;
 
     private String nome;
 

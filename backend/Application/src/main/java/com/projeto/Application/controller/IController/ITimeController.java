@@ -14,6 +14,6 @@ public interface ITimeController {
     @PostMapping
     ResponseEntity cadastrar(@RequestBody TimeRequest timeRequest);
 
-    @GetMapping("/todas")
+    @GetMapping("/todos")
     ResponseEntity<List<TimeResponse>> listar();
 }

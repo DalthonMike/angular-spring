@@ -37,7 +37,9 @@ public class PessoaController implements IPessoaController {
 
     @Override
     public ResponseEntity editar(PessoaRequest pessoaRequest) {
-        Pessoa pessoa = pessoaRequestConverter.toEntity(pessoaRequest);
+        Pessoa pessoa = pessoaService.buscarPorId(pessoaRequest.getId());
+        pessoa.setNome(pessoaRequest.getNome());
+        pessoa.setEmail(pessoaRequest.getEmail());
         pessoaService.editar(pessoa);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }

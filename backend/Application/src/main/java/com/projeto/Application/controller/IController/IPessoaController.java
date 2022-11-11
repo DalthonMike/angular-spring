@@ -5,12 +5,13 @@ import com.projeto.Application.response.PessoaResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 public interface IPessoaController {
 
     @PostMapping
-    ResponseEntity cadastrar(@RequestBody PessoaRequest pessoaRequest);
+    ResponseEntity cadastrar(@Valid @RequestBody PessoaRequest pessoaRequest);
 
     @PutMapping
     ResponseEntity editar(@RequestBody PessoaRequest pessoaRequest);
