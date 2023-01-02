@@ -28,4 +28,6 @@ public interface IPessoaController {
     @GetMapping("/todas")
     ResponseEntity<List<PessoaResponse>> listarTodos();
 
+    @GetMapping("/tecnicos")
+    ResponseEntity<List<PessoaResponse>> listarTecnicos();
 }
