@@ -34,6 +34,11 @@ export class PessoaService {
   listarTodas(): Observable<any>{
     return this.http.get<any>(`${this.pathBase}/pessoa/todas`)
   }
+
+  listarTecnicos(): Observable<any> {
+    return this.http.get<any>(`${this.pathBase}/pessoa/tecnicos`)
+  }
+
   exclusao(id: number) {
     return this.http.delete<any>(`${this.pathBase}/pessoa/${id}`)
   }
