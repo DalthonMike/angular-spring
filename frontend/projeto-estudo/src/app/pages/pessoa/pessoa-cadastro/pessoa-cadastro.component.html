@@ -1,54 +1,40 @@
-<div class="container-fluid container">
-  <form class="needs-validation" name="treinamentoForm" #pessoaForm="ngForm" (ngSubmit)="onSubmit(pessoaForm)"
-        novalidate>
-    <p-card class="card">
-      <p>Cadastro de pessoa</p>
-      <div style="margin-bottom: 10px">
+<form class="needs-validation" name="treinamentoForm" #pessoaForm="ngForm" (ngSubmit)="onSubmit(pessoaForm)">
+
+  <p-card class="card">
+    <p style="color: #9C27B0; margin-top: 0">CADASTRO DE PESSOA</p>
+
+    <div class="row" style="margin-bottom: 10px">
+
+      <div class="col"><i class="pi pi-user" style="color: #9C27B0"></i>
         <input class="inputs" placeholder="Nome" type="text" name="nome" required [(ngModel)]="resource.nome"
-               [ngClass]="{'is-invalid': validaPreenchimento(resource.nome)}"
-        >
-        <div *ngIf="validaPreenchimento(resource.nome)"
-             class="invalid-feedback-curso">
-          O nome é de preenchimento obrigatório
-        </div>
+               [ngClass]="{'is-invalid': validaPreenchimento(resource.nome)}">
       </div>
-      <div style="margin-bottom: 10px">
-        <input class="inputs" placeholder="E-mail" type="text" name="email" required [(ngModel)]="resource.email"
-               [ngClass]="{'is-invalid': validaPreenchimento(resource.email)}"
-        >
-        <div *ngIf="validaPreenchimento(resource.email)"
-             class="invalid-feedback-curso">
-          O email é de preenchimento obrigatório
-        </div>
+      <div class="col"><i class="pi pi-envelope" style="color: #9C27B0"></i>
+        <input class="inputs" placeholder="E-mail" type="text" name="E-mail" required [(ngModel)]="resource.email"
+               [ngClass]="{'is-invalid': validaPreenchimento(resource.email)}">
       </div>
-      <div style="margin-bottom: 10px">
-        <input class="inputs" placeholder="CPF" type="text" name="cpf" required mask="000.000.000-00"
-               [(ngModel)]="resource.cpf"
-               [ngClass]="{'is-invalid': validaPreenchimento(resource.cpf)}"
-        >
-        <div *ngIf="validaPreenchimento(resource.cpf)"
-             class="invalid-feedback-curso">
-          O CPF é de preenchimento obrigatório
-        </div>
+      <div class="col"><i class="pi pi-credit-card" style="color: #9C27B0"></i>
+        <input class="inputs" placeholder="CPF" type="text" name="CPF" required mask="000.000.000-00"
+               [(ngModel)]="resource.cpf" [ngClass]="{'is-invalid': validaPreenchimento(resource.cpf)}">
       </div>
-      <div class="field col-12 md:col-4">
-        <p-dropdown inputId="dropdown" [autoDisplayFirst]="false" [options]="perfis" name="perfil" [(ngModel)]="resource.perfil" optionLabel="name" optionValue="descricao"
-                    placeholder="Selecione um perfil"
-        [ngClass]="{'ng-invalid ng-dirty': validaPreenchimento(resource.perfil)}"
-        ></p-dropdown>
-        <div *ngIf="validaPreenchimento(resource.perfil)"
-             class="invalid-feedback-curso">
-          O Perfil é de preenchimento obrigatório
-        </div>
-      </div>
-      <div>
-        <p-button label="Cadastre-se" iconPos="left" type="submit"></p-button>
-      </div>
-      <div>
-        <button style="margin-top: 5px" iconPos="left" pButton type="button" (click)="voltar()"
-                class="p-button-secondary"><i class="pi pi-arrow-left" style="margin-right: 5px"></i>Voltar
-        </button>
-      </div>
-    </p-card>
-  </form>
-</div>
+    </div>
+    <div>
+      <p-dropdown inputId="dropdown" [autoDisplayFirst]="false" [options]="perfis" name="perfil"
+                  [(ngModel)]="resource.perfil"
+                  optionLabel="name" optionValue="descricao"
+                  placeholder="Selecione um perfil" [ngClass]="
+                {'ng-invalid ng-dirty': validaPreenchimento(resource.perfil)}">
+      </p-dropdown>
+    </div>
+  </p-card>
+  <div style="margin-top: 5px">
+    <button style="float: right;  margin-left: 5px" pButton pRipple type="button" label="Cadastre-se" iconPos="left"
+            type="submit"
+            class="p-button-outlined p-button-help"></button>
+
+    <button style=" margin-left: 5px; float: right; margin-bottom: 5px" iconPos="left" pButton type="button"
+            (click)="voltar()"
+            class="p-button-help"><i class="pi pi-arrow-left " style="margin-right: 5px"></i>Voltar
+    </button>
+  </div>
+</form>

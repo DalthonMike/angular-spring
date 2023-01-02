@@ -10,7 +10,6 @@ import {CheckboxModule} from "primeng/checkbox";
 import {FormsModule} from "@angular/forms";
 import {SideBarModule} from "../../side-bar/side-bar.module";
 
-
 @NgModule({
   declarations: [
     PessoaConsultaComponent,

@@ -12,7 +12,7 @@ import {Router} from "@angular/router";
 export class PessoaConsultaComponent implements OnInit {
 
   pessoas: PessoaResponseModel[] = []
-  checkbox: boolean = false;
+  checkTodas: boolean = false;
 
   constructor(
     private pessoaService: PessoaService,

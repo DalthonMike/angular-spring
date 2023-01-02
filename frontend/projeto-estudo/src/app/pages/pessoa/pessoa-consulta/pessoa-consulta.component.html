@@ -1,40 +1,65 @@
 <div class="card">
-  <p-card header="Lista de Pessoas">
-    <div class="row">
-      <p-checkbox type="checkbox" id="todas" [(ngModel)]="checkbox" [binary]="true" (click)="checkBoxChange(checkbox)">
-      </p-checkbox>
-      <label for="todas" style="margin-left: 5px">Todas</label>
+  <p-card>
+    <h1 style="color: #9C27B0">Lista de Pessoas</h1>
+    <div class="row" style="margin-left: 5px ">
+      <p-checkbox id="checkTodas" [(ngModel)]="checkTodas" [binary]="true" inputId="binary"
+                  (click)="checkBoxChange(checkTodas)"></p-checkbox>
+      <div style="margin-top: 7px; margin-left: 5px">
+        <label> Todas </label>
+      </div>
     </div>
-    <p-table [value]="pessoas" [scrollable]="true" scrollHeight="400px">
+    <p-table [value]="pessoas" [scrollable]="true" responsiveLayout="scroll">
       <ng-template pTemplate="header">
         <tr>
-          <th style="min-width:200px">Nome</th>
-          <th style="min-width:200px">E-mail</th>
-          <th style="min-width:200px">CPF</th>
-          <th style="min-width:200px">Status</th>
-          <th style="min-width:200px">Perfil</th>
-          <th style="min-width:200px">Ações</th>
+          <i class="pi pi-user" style="color: #9C27B0; margin-top: 20px"></i>
+          <th style="color: #9C27B0">NOME</th>
+          <i class="pi pi-credit-card" style="color: #9C27B0; margin-top: 20px"></i>
+          <th style="color: #9C27B0">CPF</th>
+          <i class="pi pi-envelope" style="color: #9C27B0; margin-top: 20px"></i>
+          <th style="color: #9C27B0">E-MAIL</th>
+          <i class="pi pi-star-fill" style="color: #9C27B0; margin-top: 20px"></i>
+          <th style="color: #9C27B0">STATUS</th>
+          <i class="pi pi-flag" style="color: #9C27B0; margin-top: 20px"></i>
+          <th style="color: #9C27B0">PERFIL</th>
+          <i class="pi pi-play" style="color: #9C27B0; margin-top: 20px"></i>
+          <th style="color: #9C27B0">AÇÕES</th>
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-pessoas>
         <tr>
-          <td style="min-width:200px">{{pessoas.nome}}</td>
-          <td style="min-width:200px">{{pessoas.email}}</td>
-          <td style="min-width:200px">{{pessoas.cpf | cpf}}</td>
-          <td style="min-width:200px">{{pessoas.status}}</td>
-          <td style="min-width:200px">{{pessoas.perfil}}</td>
+          <td>{{pessoas.nome}}</td>
+          <td>{{pessoas.cpf | cpf}}</td>
+          <td>{{pessoas.email}}</td>
+          <td>{{pessoas.status}}</td>
+          <td>{{pessoas.perfil}}</td>
           <td>
-            <p-button *ngIf="pessoas.status != 'Excluído'" icon="pi pi-pencil" title="Editar Pessoa" styleClass="p-button-primary"
-                      [style]="{'margin-right' : '5px'}" (click)="editar(pessoas)"></p-button>
-            <p-button *ngIf="pessoas.status != 'Excluído'" icon="pi pi-trash" title="Excluir Pessoa"
-                      (click)="excluir(pessoas.id)"
-                      styleClass="p-button-danger"></p-button>
+            <button *ngIf="pessoas.status != 'Excluído'"
+                    pButton pRipple type="button"
+                    icon="pi pi-pencil" (click)="editar(pessoas)"
+                    class="p-button-rounded p-button-info p-button-text"></button>
+            <button *ngIf="pessoas.status != 'Excluído'"
+                    pButton pRipple type="button"
+                    icon="pi pi-trash" (click)="excluir(pessoas.id)"
+                    class="p-button-rounded p-button-danger p-button-text"></button>
           </td>
         </tr>
       </ng-template>
     </p-table>
-    <div style="margin-top: 50px; float: right">
-      <p-button label="Nova Pessoa" icon="pi pi-plus" routerLink="/pessoa-cadastro"></p-button>
-    </div>
   </p-card>
+  <div class="col">
+    <div>
+      <button style=" float: right; margin-top: 5px; margin-left: 5px"
+              pButton type="button"
+              label="Nova Pessoa"
+              class="p-button-outlined p-button-help"
+              routerLink="/pessoa-cadastro"></button>
+    </div>
+    <div>
+      <button style=" float: right; margin-top: 5px"
+              pButton type="button"
+              label="Novo Time"
+              class="p-button-outlined p-button-help"
+              routerLink="/time-cadastro"></button>
+    </div>
+  </div>
 </div>

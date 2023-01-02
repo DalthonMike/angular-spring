@@ -1,34 +1,41 @@
-<div class="container-fluid container">
-  <form class="needs-validation" name="treinamentoForm" #pessoaForm="ngForm" (ngSubmit)="onSubmit(pessoaForm)"
-        novalidate>
+<div>
+  <form class="needs-validation" name="treinamentoForm"
+        #pessoaForm="ngForm" (ngSubmit)="onSubmit(pessoaForm)" novalidate>
+
     <p-card class="card">
-      <p>Cadastro de pessoa</p>
-      <div style="margin-bottom: 10px">
-        <input class="inputs" placeholder="Nome" type="text" name="nome" required [(ngModel)]="resource.nome"
-               [ngClass]="{'is-invalid': validaPreenchimento(resource.nome)}"
-        >
+      <p style="color: #9C27B0">EDITAR PESSOA</p>
+
+      <div class="row">
+        <div class="col"><i class="pi pi-user" style="color: #9C27B0"></i>
+          <input class="inputs" placeholder="Nome" type="text" name="nome" required [(ngModel)]="resource.nome"
+                 [ngClass]="{'is-invalid': validaPreenchimento(resource.nome)}">
+        </div>
         <div *ngIf="validaPreenchimento(resource.nome)"
              class="invalid-feedback-curso">
           O nome é de preenchimento obrigatório
         </div>
-      </div>
-      <div style="margin-bottom: 10px">
-        <input class="inputs" placeholder="E-mail" type="text" name="email" required [(ngModel)]="resource.email"
-               [ngClass]="{'is-invalid': validaPreenchimento(resource.email)}"
-        >
-        <div *ngIf="validaPreenchimento(resource.email)"
-             class="invalid-feedback-curso">
-          O email é de preenchimento obrigatório
+
+        <div class="col"><i class="pi pi-envelope" style="color: #9C27B0"></i>
+          <input class="inputs" placeholder="E-mail" type="text" name="email" required [(ngModel)]="resource.email"
+                 [ngClass]="{'is-invalid': validaPreenchimento(resource.email)}">
+
+          <div *ngIf="validaPreenchimento(resource.email)"
+               class="invalid-feedback-curso">
+            O email é de preenchimento obrigatório
+          </div>
         </div>
       </div>
-      <div>
-        <p-button label="Editar" iconPos="left" type="submit"></p-button>
-      </div>
-      <div>
-        <button style="margin-top: 5px" iconPos="left" pButton type="button" (click)="voltar()"
-                class="p-button-secondary"><i class="pi pi-arrow-left" style="margin-right: 5px"></i>Voltar
-        </button>
-      </div>
     </p-card>
+    <div style="margin-top: 5px;margin-right: 5px; float: right">
+      <button pButton pRipple type="button" (click)="editar()"
+              label="Salvar" class="p-button-outlined p-button-help"></button>
+    </div>
+
+    <div style="margin-top: 5px">
+      <button style=" margin-right: 5px; float: right; margin-bottom: 5px" iconPos="left" pButton type="button"
+              (click)="voltar()"
+              class="p-button-help"><i class="pi pi-arrow-left " style="margin-right: 5px"></i>Voltar
+      </button>
+    </div>
   </form>
 </div>

@@ -1,20 +1,28 @@
-<div class="container-fluid container">
+<p-card class="card">
+  <p style="color: #9C27B0; margin-top: 0">CADASTRO TIME</p>
 
-  <p-card class="card" header="Cadastrar Time" [style]="{'width': '18rem', 'margin-bottom': '2em'}">
-    <div style="margin-bottom: 10px">
-      <input type="text" placeholder="Nome do Time" type="text" name="nome" pInputText/>
+  <div style="margin-bottom: 10px">
+
+    <div clas="row">
+      <div class="col"><i class="pi pi-users" style="color: #9C27B0"></i>
+        <input class="inputs" placeholder="Nome do Time" type="text" name="nome">
+      </div>
     </div>
-    <div style="margin-bottom: 10px">
+    <div style="margin-top: 5px;">
       <p-dropdown inputId="dropdown" [autoDisplayFirst]="false" [options]="tecnicos" name="perfil" optionLabel="nome"
                   placeholder="Selecione um técnico"
+
       ></p-dropdown>
     </div>
-    <div style="margin-bottom: 10px">
-      <p-button label="Cadastrar Time" iconPos="left" type="submit"></p-button>
-    </div>
-    <div style="margin-bottom: 5px">
-      <button label="Voltar" iconPos="left" pButton type="button">
-      </button>
-    </div>
+  </div>
+</p-card>
 
-  </p-card>
+<div style="margin-top: 5px;margin-right: 5px; float: right">
+  <button pButton pRipple type="button" label="Cadastrar Time" class="p-button-outlined p-button-help"></button>
+</div>
+<div style="margin-top: 5px">
+  <button style=" margin-right: 5px; float: right; margin-bottom: 5px" iconPos="left" pButton type="button"
+          (click)="voltar()"
+          class="p-button-help"><i class="pi pi-arrow-left " style="margin-right: 5px"></i>Voltar
+  </button>
+</div>

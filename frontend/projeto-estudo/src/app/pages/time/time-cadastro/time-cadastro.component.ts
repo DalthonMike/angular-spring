@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {PessoaService} from "../../pessoa/pessoa.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-time-cadastro',
@@ -11,6 +12,7 @@ export class TimeCadastroComponent implements OnInit {
   tecnicos: any[] = [];
 
   constructor(
+    private router: Router,
     private pessoaService: PessoaService,
   ) {
   }
@@ -25,4 +27,7 @@ export class TimeCadastroComponent implements OnInit {
     });
   }
 
+  voltar() {
+    this.router.navigate([''])
+  }
 }
