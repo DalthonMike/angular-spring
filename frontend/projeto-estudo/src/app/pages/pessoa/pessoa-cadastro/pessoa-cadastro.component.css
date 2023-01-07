@@ -36,3 +36,7 @@ p {
 .is-invalid {
   border-color: red;
 }
+
+.image img {
+  max-width: 50px;
+}

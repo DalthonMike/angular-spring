@@ -1,7 +1,44 @@
-<!--<nav class="navbar">
-  <h3 class="logo">Projeto</h3>
-  <div class="layout-menu">
-    <a class="menu-itens" href="/pessoa-consulta">Gerenciar Pessoa </a>
-    <a class="menu-itens" href="/time-cadastro">Cadastrar Time </a>
-  </div>
-</nav>-->
+<div class="body-side">
+  <nav class="sidebar" [ngClass]="{'sidebar': status, 'sidebar-close': !status}">
+    <header>
+      <div class="image-text">
+      <span class="image">
+        <img src="assets/img/diamondShadow.webp" alt="logo">
+      </span>
+
+        <div class="text-title header-text">
+          <span class="name" style="margin-left: 28px">D.M.V</span>
+          <span class="profession">DEVELOPERS</span>
+        </div>
+      </div>
+
+      <button class="pi pi-angle-left toggle" *ngIf="status" (click)="abrir()"></button>
+      <button class="pi pi-angle-right toggle" *ngIf="!status" (click)="abrir()"></button>
+    </header>
+
+    <div class="menu-bar">
+      <div class="menu">
+        <ul class="menu-links" style="padding-left: 0">
+          <li class="nav-link">
+            <a href="">
+              <i class="pi pi-home icon"></i>
+              <span class="text nav-text">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="/pessoa-consulta">
+              <i class="pi pi-user icon"></i>
+              <span class="text nav-text">Gerenciar Pessoa</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="">
+              <i class="pi pi-home icon"></i>
+              <span class="text a nav-text">Gerenciar Time</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
