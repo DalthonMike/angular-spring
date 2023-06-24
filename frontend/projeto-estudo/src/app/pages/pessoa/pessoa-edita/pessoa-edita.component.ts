@@ -4,7 +4,6 @@ import {PessoaService} from "../pessoa.service";
 import {Menssagens} from "../../../menssagem/menssagens";
 import {Router} from "@angular/router";
 import {Utils} from "../../../util/Utils";
-import {PessoaModel} from "../model/pessoa.model";
 import {Perfil} from "../../../interfaces/Perfil";
 
 @Component({
