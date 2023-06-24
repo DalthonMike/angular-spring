@@ -18,7 +18,6 @@ import {SplitButtonModule} from "primeng/splitbutton";
 import {CheckboxModule} from "primeng/checkbox";
 import {FormsModule} from "@angular/forms";
 import {DropdownModule} from "primeng/dropdown";
-import {TimeModule} from "./pages/time/time.module";
 
 @NgModule({
   declarations: [
@@ -33,7 +32,6 @@ import {TimeModule} from "./pages/time/time.module";
     HttpClientModule,
     PessoaCadastroModule,
     PessoaConsultaModule,
-    TimeModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: true
     }),
