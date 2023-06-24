@@ -7,17 +7,24 @@ import {InputTextModule} from 'primeng/inputtext';
 import {CascadeSelectModule} from 'primeng/cascadeselect';
 import {ButtonModule} from 'primeng/button';
 import {DropdownModule} from "primeng/dropdown";
+import {TimeConsultaComponent} from './time-consulta/time-consulta.component';
+import {CheckboxModule} from "primeng/checkbox";
+import {TableModule} from "primeng/table";
+import {FormsModule} from "@angular/forms";
+import {RippleModule} from "primeng/ripple";
 
 @NgModule({
   declarations: [
-    TimeCadastroComponent
+    TimeCadastroComponent,
+    TimeConsultaComponent
   ],
-  imports: [
-    CommonModule,
-    CardModule,
-    SharedModule,
-    InputTextModule,
-    CascadeSelectModule, ButtonModule, DropdownModule],
+    imports: [
+        CommonModule,
+        CardModule,
+        SharedModule,
+        InputTextModule,
+        FormsModule,
+        CascadeSelectModule, ButtonModule, DropdownModule, CheckboxModule, TableModule, RippleModule],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ]

@@ -14,4 +14,6 @@ public class TimeResponse {
     private Long id;
 
     private String nome;
+
+    private String nomePerfil;
 }

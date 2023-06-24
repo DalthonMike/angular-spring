@@ -4,6 +4,7 @@ import {PessoaCadastroComponent} from "./pages/pessoa/pessoa-cadastro/pessoa-cad
 import {PessoaConsultaComponent} from "./pages/pessoa/pessoa-consulta/pessoa-consulta.component";
 import {PessoaEditaComponent} from "./pages/pessoa/pessoa-edita/pessoa-edita.component";
 import {TimeCadastroComponent} from "./pages/time/time-cadastro/time-cadastro.component";
+import {TimeConsultaComponent} from "./pages/time/time-consulta/time-consulta.component";
 
 
 const routes: Routes = [
@@ -12,7 +13,7 @@ const routes: Routes = [
   {path: 'pessoa-cadastro', component: PessoaCadastroComponent},
   {path: 'pessoa-edita', component: PessoaEditaComponent},
   {path: 'time-cadastro', component: TimeCadastroComponent},
-
+  {path: 'time-consulta', component: TimeConsultaComponent},
 ];
 
 @NgModule({

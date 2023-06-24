@@ -11,6 +11,7 @@ public class TimeResponseConverter extends AbstractResponseMapper<Time, TimeResp
         return TimeResponse.builder()
                 .id(response.getId())
                 .nome(response.getNome())
+                .nomePerfil(response.getNomePerfil())
                 .build();
     }
 }

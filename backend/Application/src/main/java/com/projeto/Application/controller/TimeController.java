@@ -39,4 +39,9 @@ public class TimeController implements ITimeController {
     public ResponseEntity<List<TimeResponse>> listar() {
         return ResponseEntity.ok(timeResponseConverter.toResponse(timeService.listaDeTimes()));
     }
+
+    @Override
+    public void deletar(Long id) {
+        timeService.excluir(id);
+    }
 }
