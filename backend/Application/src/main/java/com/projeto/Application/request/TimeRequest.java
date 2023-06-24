@@ -10,4 +10,7 @@ public class TimeRequest {
 
     @NotNull
     private String nome;
+
+    @NotNull
+    private String nomePerfil;
 }

@@ -14,6 +14,7 @@ public class TimeRequesConverter extends AbstractEntityMapper<TimeRequest, Time>
         return Time.builder()
                 .id(Objects.isNull(request.getId()) ? null : request.getId())
                 .nome(request.getNome())
+                .nomePerfil(request.getNomePerfil())
                 .build();
     }
 }

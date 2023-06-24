@@ -1,5 +1,6 @@
 package com.projeto.Application.model;
 
+import com.projeto.Application.enun.StatusTimeEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,5 +21,10 @@ public class Time {
     private Long id;
 
     private String nome;
+
+    private String nomePerfil;
+
+    @Enumerated(EnumType.STRING)
+    private StatusTimeEnum status;
 
 }
