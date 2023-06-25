@@ -44,3 +44,63 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Arquivos e diretórios específicos do Angular
+/node_modules
+/dist
+/tmp
+/angular.json
+/package.json
+/package-lock.json
+/tsconfig.json
+/tsconfig.app.json
+/tsconfig.spec.json
+/tslint.json
+/e2e/protractor.conf.js
+/e2e/tsconfig.json
+/src/test.ts
+/src/polyfills.ts
+/src/tsconfig.app.json
+/src/tsconfig.spec.json
+
+# Arquivos gerados pelo editor de código
+/.vscode
+/.idea
+/.vs
+*.sublime-*
+*.swp
+*.bak
+
+# Arquivos de build e logs
+/logs
+/build
+/coverage
+.nyc_output
+
+# Outros arquivos e diretórios
+/.env
+/.env.*
+/.DS_Store
+/Thumbs.db
+/*.log
+
+# Ignorar arquivos específicos
+/README.md
+/.gitignore
+
+node_modules/
+dist/
+*.log
+*.pid
+*.seed
+*.pid.lock
+*.config.js
+*.sqlite
+*.db
+*.db-shm
+*.db-wal
+*.pack
+
+
+/.idea/workspace.xml
+/index.pack.old
