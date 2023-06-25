@@ -1,14 +1,11 @@
-import {Perfil} from "../../../interfaces/Perfil";
+import { Perfil } from '../app/interfaces/Perfil';
 
 export class PessoaResponseModel {
-
-  constructor() {
-  }
+  constructor() {}
 
   perfil: Perfil | undefined;
   status: string | undefined;
   nome: string | undefined;
   email: string | undefined;
   cpf: string | undefined;
-
 }

@@ -1,43 +1,92 @@
-<form class="needs-validation" name="treinamentoForm" #pessoaForm="ngForm" (ngSubmit)="onSubmit(pessoaForm)">
-
+<form
+  class="needs-validation"
+  name="treinamentoForm"
+  #pessoaForm="ngForm"
+  (ngSubmit)="onSubmit(pessoaForm)"
+>
   <p-card class="card">
     <span class="image">
-        <img src="assets/img/diamondShadow.webp" alt="logo">
-      </span>
-    <p style="color: #9C27B0; margin-top: 0">CADASTRO DE PESSOA</p>
+      <img src="assets/img/diamondShadow.webp" alt="logo" />
+    </span>
+    <p style="color: #9c27b0; margin-top: 0">CADASTRO DE PESSOA</p>
 
     <div class="row" style="margin-bottom: 10px">
-
-      <div class="col"><i class="pi pi-user" style="color: #9C27B0"></i>
-        <input class="inputs" placeholder="Nome" type="text" name="nome" required [(ngModel)]="resource.nome"
-               [ngClass]="{'is-invalid': validaPreenchimento(resource.nome)}">
+      <div class="col">
+        <i class="pi pi-user" style="color: #9c27b0"></i>
+        <input
+          class="inputs"
+          placeholder="Nome"
+          type="text"
+          name="nome"
+          required
+          [(ngModel)]="resource.nome"
+          [ngClass]="{ 'is-invalid': validaPreenchimento(resource.nome) }"
+        />
       </div>
-      <div class="col"><i class="pi pi-envelope" style="color: #9C27B0"></i>
-        <input class="inputs" placeholder="E-mail" type="text" name="E-mail" required [(ngModel)]="resource.email"
-               [ngClass]="{'is-invalid': validaPreenchimento(resource.email)}">
+      <div class="col">
+        <i class="pi pi-envelope" style="color: #9c27b0"></i>
+        <input
+          class="inputs"
+          placeholder="E-mail"
+          type="text"
+          name="E-mail"
+          required
+          [(ngModel)]="resource.email"
+          [ngClass]="{ 'is-invalid': validaPreenchimento(resource.email) }"
+        />
       </div>
-      <div class="col"><i class="pi pi-credit-card" style="color: #9C27B0"></i>
-        <input class="inputs" placeholder="CPF" type="text" name="CPF" required mask="000.000.000-00"
-               [(ngModel)]="resource.cpf" [ngClass]="{'is-invalid': validaPreenchimento(resource.cpf)}">
+      <div class="col">
+        <i class="pi pi-credit-card" style="color: #9c27b0"></i>
+        <input
+          class="inputs"
+          placeholder="CPF"
+          type="text"
+          name="CPF"
+          required
+          mask="000.000.000-00"
+          [(ngModel)]="resource.cpf"
+          [ngClass]="{ 'is-invalid': validaPreenchimento(resource.cpf) }"
+        />
       </div>
     </div>
     <div>
-      <p-dropdown inputId="dropdown" [autoDisplayFirst]="false" [options]="perfis" name="perfil"
-                  [(ngModel)]="resource.perfil"
-                  optionLabel="name" optionValue="descricao"
-                  placeholder="Selecione um perfil" [ngClass]="
-                {'ng-invalid ng-dirty': validaPreenchimento(resource.perfil)}">
+      <p-dropdown
+        inputId="dropdown"
+        [autoDisplayFirst]="false"
+        [options]="perfis"
+        name="perfil"
+        [(ngModel)]="resource.perfil"
+        optionLabel="name"
+        optionValue="descricao"
+        placeholder="Selecione um perfil"
+        [ngClass]="{
+          'ng-invalid ng-dirty': validaPreenchimento(resource.perfil)
+        }"
+      >
       </p-dropdown>
     </div>
   </p-card>
   <div style="margin-top: 5px">
-    <button style="float: right;  margin-left: 5px" pButton pRipple type="button" label="Cadastre-se" iconPos="left"
-            type="submit"
-            class="p-button-outlined p-button-help"></button>
+    <button
+      style="float: right; margin-left: 5px"
+      pButton
+      pRipple
+      type="button"
+      label="Cadastre-se"
+      iconPos="left"
+      type="submit"
+      class="p-button-outlined p-button-help"
+    ></button>
 
-    <button style=" margin-left: 5px; float: right; margin-bottom: 5px" iconPos="left" pButton type="button"
-            (click)="voltar()"
-            class="p-button-help"><i class="pi pi-arrow-left " style="margin-right: 5px"></i>Voltar
+    <button
+      style="margin-left: 5px; float: right; margin-bottom: 5px"
+      iconPos="left"
+      pButton
+      type="button"
+      (click)="voltar()"
+      class="p-button-help"
+    >
+      <i class="pi pi-arrow-left" style="margin-right: 5px"></i>Voltar
     </button>
   </div>
 </form>

@@ -1,0 +1,193 @@
+<form id="formulario" #f="ngForm" (ngSubmit)="cadastrar(f)">
+  <p-card class="card">
+    <span class="image">
+      <img src="assets/img/evolucaoFarm.png" alt="logo" />
+    </span>
+
+    <p style="color: red">CADASTRO DE MEDICAMENTO</p>
+
+    <div style="margin-bottom: 25px">
+      <!-- MEDICAMENTO -->
+
+      <input
+        class="inputs"
+        placeholder="Medicamento"
+        type="text"
+        name="nome"
+        id="nome"
+        ngModel
+        required
+        #nome="ngModel"
+      />
+      <div *ngIf="(nome?.invalid && nome?.touched) || nome?.dirty">
+        <span
+          class="erro__texto"
+          *ngIf="nome?.errors?.
+      ['required']"
+          >O nome do medicamento deve ser informado.</span
+        >
+      </div>
+    </div>
+    <div style="margin-bottom: 25px">
+      <!--CÓDIGO DE BARRA -->
+      <input
+        class="inputs"
+        placeholder="Código de Barra"
+        type="text"
+        name="codigoBarras"
+        id="codigoBarras"
+        ngModel
+        required
+        pattern="^\d{8}$"
+        #codigoBarras="ngModel"
+      />
+      <div
+        *ngIf="
+          (codigoBarras?.invalid && codigoBarras?.touched) ||
+          codigoBarras?.dirty
+        "
+      >
+        <span
+          class="erro__texto"
+          *ngIf="codigoBarras?.errors?.
+      ['required']"
+          >O código de barra deve ser inserido.</span
+        >
+        <span
+          class="erro__texto"
+          *ngIf="codigoBarras?.errors?.
+      ['pattern']"
+          >O código inserido está no formato incorreto!.</span
+        >
+      </div>
+    </div>
+    <div style="margin-bottom: 25px">
+      <!-- DOSAGEM -->
+      <input
+        class="inputs"
+        placeholder="Dosagem"
+        type="text"
+        name="dosagem"
+        ngModel
+        required
+        #dosagem="ngModel"
+      />
+      <div *ngIf="(dosagem?.invalid && dosagem?.touched) || dosagem?.dirty">
+        <span
+          class="erro__texto"
+          *ngIf="dosagem?.errors?.
+      ['required']"
+          >A dosagem deve ser inserida.</span
+        >
+      </div>
+    </div>
+    <div style="margin-bottom: 25px">
+      <!-- FABRICANTE -->
+      <input
+        class="inputs"
+        placeholder="Fabricante"
+        type="text"
+        name="fabricante"
+        ngModel
+        required
+        #fabricante="ngModel"
+      />
+      <div
+        *ngIf="
+          (fabricante?.invalid && fabricante?.touched) || fabricante?.dirty
+        "
+      >
+        <span
+          class="erro__texto"
+          *ngIf="fabricante?.errors?.
+      ['required']"
+          >O fabricante deve ser informado.</span
+        >
+      </div>
+    </div>
+    <div style="margin-bottom: 25px">
+      <!-- FABRICAÇÃO -->
+      <input
+        class="inputs"
+        placeholder="Fabricação"
+        type="date"
+        name="dataFabricacao"
+        ngModel
+        required
+        #dataFabricacao="ngModel"
+      />
+      <div
+        *ngIf="
+          (dataFabricacao?.invalid && dataFabricacao?.touched) ||
+          dataFabricacao?.dirty
+        "
+      >
+        <span
+          class="erro__texto"
+          *ngIf="dataFabricacao?.errors?.
+      ['required']"
+          >A data de fabricação deve ser informada.</span
+        >
+      </div>
+    </div>
+    <div style="margin-bottom: 25px">
+      <!-- VALIDADE -->
+      <input
+        class="inputs"
+        placeholder="Validade"
+        type="date"
+        name="dataValidade"
+        ngModel
+        required
+        #dataValidade="ngModel"
+      />
+      <div
+        *ngIf="
+          (dataValidade?.invalid && dataValidade?.touched) ||
+          dataValidade?.dirty
+        "
+      >
+        <span
+          class="erro__texto"
+          *ngIf="dataValidade?.errors?.
+      ['required']"
+          >A data de validade deve ser informada.</span
+        >
+      </div>
+    </div>
+    <!-- VIA DE ADM -->
+    <div style="margin-top: 20px">
+      <p-dropdown
+        inputId="dropdown"
+        name="via"
+        [options]="via"
+        optionValue="name"
+        optionLabel="descricao"
+        placeholder="Selecione a via de admnistração"
+        ngModel
+      >
+      </p-dropdown>
+    </div>
+  </p-card>
+
+  <div style="margin-top: 5px">
+    <button
+      pButton
+      pRipple
+      type="submit"
+      style="float: right"
+      class="p-button-outlined p-button-danger"
+    >
+      CADASTRAR
+    </button>
+    <button
+      pButton
+      pRipple
+      type="button"
+      style="float: right"
+      class="p-button-outlined p-button-danger"
+    >
+      VOLTAR
+    </button>
+  </div>
+</form>
