@@ -1,5 +1,6 @@
 package com.projeto.Application.response;
 
+import com.projeto.Application.enun.ViaEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,10 +16,9 @@ public class MedicamentoResponse {
 
     private Long id;
     private String nome;
-    private Long codigoBarras;
     private String dosagem;
     private String fabricante;
-    private String viaAdministracao;
     private String dataFabricacao;
     private String dataValidade;
+    private String via;
 }

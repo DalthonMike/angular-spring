@@ -1,5 +1,6 @@
 package com.projeto.Application.model;
 
+import com.projeto.Application.enun.ViaEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,9 +29,9 @@ public class Medicamento {
 
     private String fabricante;
 
-    private String viaAdministracao;
-
     private String dataFabricacao;
 
     private String dataValidade;
+
+    private ViaEnum via;
 }

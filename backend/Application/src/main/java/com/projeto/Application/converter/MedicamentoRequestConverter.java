@@ -15,9 +15,9 @@ public class MedicamentoRequestConverter extends AbstractEntityMapper<Medicament
                 .codigoBarras(request.getCodigoBarras())
                 .dosagem(request.getDosagem())
                 .fabricante(request.getFabricante())
-                .viaAdministracao(request.getViaAdministracao())
                 .dataFabricacao(request.getDataFabricacao())
                 .dataValidade(request.getDataValidade())
+                .via(request.getVia())
                 .build();
     }
 }

@@ -1,18 +1,15 @@
 package com.projeto.Application.request;
 
+import com.projeto.Application.enun.ViaEnum;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
-import java.sql.Date;
 
 @Data
 public class MedicamentoRequest {
 
     @NotNull
     private String nome;
-
-    @NotNull
-    private Long preco;
 
     @NotNull
     private Long codigoBarras;
@@ -24,12 +21,12 @@ public class MedicamentoRequest {
     private String fabricante;
 
     @NotNull
-    private String viaAdministracao;
-
-    @NotNull
     private String dataFabricacao;
 
     @NotNull
     private String dataValidade;
+
+    @NotNull
+    private ViaEnum via;
 
 }
