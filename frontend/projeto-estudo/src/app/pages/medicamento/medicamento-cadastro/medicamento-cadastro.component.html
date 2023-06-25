@@ -1,7 +1,7 @@
 <form id="formulario" #f="ngForm" (ngSubmit)="cadastrar(f)">
   <p-card class="card">
     <span class="image">
-      <img src="assets/img/evolucaoFarm.png" alt="logo" />
+      <img src="../../../../assets/img/evolucaoFarm.png" alt="logo" />
     </span>
 
     <p style="color: red">CADASTRO DE MEDICAMENTO</p>
@@ -39,6 +39,7 @@
         ngModel
         required
         pattern="^\d{8}$"
+        maxlength="8"
         #codigoBarras="ngModel"
       />
       <div

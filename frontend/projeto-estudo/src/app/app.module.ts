@@ -18,7 +18,7 @@ import { SplitButtonModule } from 'primeng/splitbutton';
 import { CheckboxModule } from 'primeng/checkbox';
 import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
-import { MedicamentoCadastroComponent } from './pages/medicamento/medicamento-cadastro/medicamento-cadastro/medicamento-cadastro.component';
+import { MedicamentoCadastroComponent } from './pages/medicamento/medicamento-cadastro/medicamento-cadastro.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({

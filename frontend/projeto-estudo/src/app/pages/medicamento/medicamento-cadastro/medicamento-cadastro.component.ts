@@ -2,7 +2,8 @@ import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Menssagens } from 'src/app/menssagem/menssagens';
-import { Via } from 'src/app/interfaces/via';
+import { Via } from 'src/app/interfaces/Via';
+import {MedicamentoService} from "../medicamento.service";
 
 @Component({
   selector: 'app-medicamento-cadastro',
@@ -12,7 +13,7 @@ import { Via } from 'src/app/interfaces/via';
 export class MedicamentoCadastroComponent implements OnInit {
   via: Via[];
 
-  constructor(private router: Router, private menssagem: Menssagens) {
+  constructor(private router: Router, private menssagem: Menssagens, private medicamentoService: MedicamentoService) {
     this.via = [
       { name: 'ORAL', descricao: 'Oral' },
       { name: 'INTRAVENOSA', descricao: 'Intravenosa' },
@@ -28,9 +29,15 @@ export class MedicamentoCadastroComponent implements OnInit {
   ngOnInit(): void {}
 
   cadastrar(form: NgForm) {
-    console.log(form.value);
     if (form.valid) {
-      this.menssagem.sucesso('Medicamento cadastrado com sucesso!');
+      this.medicamentoService.cadastro(form.value).subscribe({
+        next: () => {
+          this.menssagem.sucesso('Medicamento cadastrado com sucesso!');
+        },
+        error: (error) => {
+          this.menssagem.erroComum('Erro', error);
+        }
+      })
     } else {
       alert('Cadastro inválido');
     }
