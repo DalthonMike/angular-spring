@@ -13,7 +13,6 @@ public class PessoaRequestConverter extends AbstractEntityMapper<PessoaRequest, 
     public Pessoa toEntity(PessoaRequest request) {
         return Pessoa.builder()
                 .id(Objects.isNull(request.getId()) ? null : request.getId())
-                .perfil(request.getPerfil())
                 .nome(request.getNome())
                 .email(request.getEmail())
                 .cpf(request.getCpf())

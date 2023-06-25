@@ -1,6 +1,5 @@
 package com.projeto.Application.response;
 
-import com.projeto.Application.enun.PerfilEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -1,6 +1,5 @@
 package com.projeto.Application.repository;
 
-import com.projeto.Application.enun.PerfilEnum;
 import com.projeto.Application.enun.StatusPessoaEnum;
 import com.projeto.Application.model.Pessoa;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -14,5 +13,4 @@ public interface PessoaRepository extends JpaRepository<Pessoa, Long> {
 
     List<Pessoa> findAllByStatusIsNot(StatusPessoaEnum status);
 
-    List<Pessoa> findByPerfil(PerfilEnum perfil);
 }

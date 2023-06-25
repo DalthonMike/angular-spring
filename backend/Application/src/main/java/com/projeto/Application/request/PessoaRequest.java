@@ -1,6 +1,5 @@
 package com.projeto.Application.request;
 
-import com.projeto.Application.enun.PerfilEnum;
 import com.sun.istack.NotNull;
 import lombok.Data;
 
@@ -8,8 +7,6 @@ import lombok.Data;
 public class PessoaRequest {
 
     private Long id;
-
-    private PerfilEnum perfil;
 
     @NotNull
     private String nome;
