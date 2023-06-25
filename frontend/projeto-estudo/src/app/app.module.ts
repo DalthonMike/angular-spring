@@ -9,7 +9,7 @@ import { PessoaCadastroModule } from './pages/pessoa/pessoa-cadastro/pessoa-cada
 import { HttpClientModule } from '@angular/common/http';
 import { NgxMaskModule } from 'ngx-mask';
 import { PessoaConsultaModule } from './pages/pessoa/pessoa-consulta/pessoa-consulta.module';
-import { SideBarModule } from './pages/side-bar/side-bar.module';
+import { SideNavModule } from './sidenav/side-nav.module';
 import { PessoaEditaComponent } from './pages/pessoa/pessoa-edita/pessoa-edita.component';
 import { CommonModule } from '@angular/common';
 import { TableModule } from 'primeng/table';
@@ -19,11 +19,13 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
 import { MedicamentoCadastroComponent } from './pages/medicamento/medicamento-cadastro/medicamento-cadastro/medicamento-cadastro.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PessoaEditaComponent,
+    DashboardComponent,
     MedicamentoCadastroComponent,
   ],
   imports: [
@@ -44,8 +46,8 @@ import { MedicamentoCadastroComponent } from './pages/medicamento/medicamento-ca
     SplitButtonModule,
     CheckboxModule,
     FormsModule,
-    SideBarModule,
-    DropdownModule,
+    SideNavModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -65,9 +65,4 @@ public class PessoaController implements IPessoaController {
         return ResponseEntity.ok(pessoaResponseConverter.toResponse(pessoaService.listarTodos()));
     }
 
-    @Override
-    public ResponseEntity<List<PessoaResponse>> listarTecnicos() {
-        return ResponseEntity.ok(pessoaResponseConverter.toResponse(pessoaService.listarTecnicos()));
-    }
-
 }

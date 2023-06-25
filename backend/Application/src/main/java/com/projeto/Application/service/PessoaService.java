@@ -1,6 +1,5 @@
 package com.projeto.Application.service;
 
-import com.projeto.Application.enun.PerfilEnum;
 import com.projeto.Application.enun.StatusPessoaEnum;
 import com.projeto.Application.exception.EntidadeNaoEncontradaException;
 import com.projeto.Application.exception.NegocioException;
@@ -41,9 +40,6 @@ public class PessoaService {
         return pessoaRepository.findAll();
     }
 
-    public List<Pessoa> listarTecnicos() {
-        return pessoaRepository.findByPerfil(PerfilEnum.TECNICO);
-    }
 
     public void excluirLogicamente(Long id) {
         Pessoa byId = buscarPorId(id);

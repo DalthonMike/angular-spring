@@ -1,13 +1,19 @@
 package com.projeto.Application.enun;
 
-public enum PerfilEnum {
+public enum ViaEnum {
 
-    TECNICO("Técnico"),
-    COMUM("Comum");
+    ORAL("Oral"),
+    INTRAVENOSA("Intravenosa"),
+    SUBCUTANEA("Subcutânea"),
+    TOPICA("Tópica"),
+    RETAL("Retal"),
+    OFTALMICA("Oftálmica"),
+    NASAL("Nasal"),
+    INALATORIA("Inalatória");
 
     private String descricao;
 
-    PerfilEnum(String descricao) {
+    ViaEnum(String descricao) {
         this.descricao = descricao;
     }
 

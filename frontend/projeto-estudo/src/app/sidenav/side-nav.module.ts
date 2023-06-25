@@ -3,16 +3,16 @@ import {SidebarModule} from "primeng/sidebar";
 import {ButtonModule} from "primeng/button";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {BrowserModule} from "@angular/platform-browser";
-import {SideBarComponent} from "./side-bar.component";
+import {SideNavComponent} from "./side-nav.component";
 import {RouterModule} from "@angular/router";
 
 
 @NgModule({
   declarations: [
-    SideBarComponent
+    SideNavComponent
   ],
   exports: [
-    SideBarComponent
+    SideNavComponent
   ],
     imports:
         [
@@ -23,6 +23,6 @@ import {RouterModule} from "@angular/router";
             RouterModule,
         ]
 })
-export class SideBarModule {
+export class SideNavModule {
 
 }
