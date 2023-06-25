@@ -1,0 +1,20 @@
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
+  <div class="logo-container">
+    <button class="logo" (click)="toggleCollapse()">
+    <img class="logo" src="assets/img/evolucaoFarm.png" alt="logo">
+    </button>
+    <div class="logo-text" *ngIf="collapsed">evolution</div>
+    <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav()">
+      <i class="icon-close pi pi-times"></i>
+    </button>
+  </div>
+
+  <div class="sidenav-nav">
+    <li class="sidenav-nav-item" *ngFor="let data of navData">
+      <a class="sidenav-nav-link" [routerLink]="data.routerLink">
+        <i class="sidenav-link-icon" [class]="data.icon"></i>
+        <span class="sidenav-link-text" *ngIf="collapsed">{{data.Label}}</span>
+      </a>
+    </li>
+  </div>
+</div>

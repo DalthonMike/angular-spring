@@ -8,7 +8,7 @@ import {SplitButtonModule} from "primeng/splitbutton";
 import {CpfPipe} from "../../pipe/CpfPipe";
 import {CheckboxModule} from "primeng/checkbox";
 import {FormsModule} from "@angular/forms";
-import {SideBarModule} from "../../side-bar/side-bar.module";
+import {SideNavModule} from "../../../sidenav/side-nav.module";
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import {SideBarModule} from "../../side-bar/side-bar.module";
     SplitButtonModule,
     CheckboxModule,
     FormsModule,
-    SideBarModule
+    SideNavModule
   ]
 })
 export class PessoaConsultaModule {
