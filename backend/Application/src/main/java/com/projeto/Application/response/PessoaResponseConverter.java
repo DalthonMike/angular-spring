@@ -11,7 +11,6 @@ public class PessoaResponseConverter extends AbstractResponseMapper<Pessoa, Pess
         return PessoaResponse.builder()
                 .id(response.getId())
                 .status(response.getStatus().getDescricao())
-                .perfil(response.getPerfil().getDescricao())
                 .nome(response.getNome())
                 .email(response.getEmail())
                 .cpf(response.getCpf())
